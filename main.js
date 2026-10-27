@@ -1,4 +1,4 @@
-const ru={brand:"Детский сад «Еркемай»",n1:"О нас",n2:"Группы",n3:"Родителям",n4:"Галерея",n5:"Видео",n6:"Заявка",n7:"Контакты",tagl:"Забота · Развитие · Воспитание",h1:"Детский сад «Еркемай»",lead:"Детский сад в селе Кенен, Кордайский район, Жамбылская область. Заботимся о вашем ребёнке, его развитии и воспитании.",cta:"Оставить заявку",
+const ru={gph:"[фото помещения / группы / площадки]",brand:"Детский сад «Еркемай»",n1:"О нас",n2:"Группы",n3:"Родителям",n4:"Галерея",n5:"Видео",n6:"Заявка",n7:"Контакты",tagl:"Забота · Развитие · Воспитание",h1:"Детский сад «Еркемай»",lead:"Детский сад в селе Кенен, Кордайский район, Жамбылская область. Заботимся о вашем ребёнке, его развитии и воспитании.",cta:"Оставить заявку",
 aT:"О нас",aP:"В детском саду «Еркемай» дети растут в заботе, развиваются и получают воспитание. У нас 5-разовое полезное питание, добрые педагоги, видеонаблюдение и логопед.",
 a1:"5-разовое полезное питание",a1d:"Дети пять раз в день получают полезную и вкусную еду.",a2:"Добрые педагоги",a2d:"К каждому ребёнку относятся тепло и внимательно.",a3:"Видеонаблюдение",a3d:"Территория детского сада под видеонаблюдением.",a4:"Логопед",a4d:"Логопед развивает речь детей и учит говорить правильно.",dirL:"Руководитель",
 gT:"Наши группы",gP:"Возраст и количество групп уточняются.",g1:"Группа «Аққу»",g1d:"Возраст: [уточнить]",g2:"Группа «Көгершін»",g2d:"Возраст: [уточнить]",g3:"Название группы",g3d:"Информация о других группах",tbd:"[уточнить]",
@@ -11,7 +11,7 @@ function set(l){L=l;const d=l=="ru"?ru:kk;document.documentElement.lang=l;docume
 document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>set(b.dataset.l));try{if(localStorage.lang=="ru")set("ru")}catch(e){}
 document.getElementById("y").textContent=new Date().getFullYear();
 const nav=document.getElementById("nav");document.getElementById("tg").onclick=()=>nav.classList.toggle("open");nav.querySelectorAll("a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
-const lb=document.getElementById("lb");document.querySelectorAll(".gal img").forEach(i=>i.onclick=()=>{lb.querySelector("img").src=i.src;lb.classList.add("on")});lb.onclick=()=>lb.classList.remove("on");
+const lb=document.getElementById("lb");document.querySelectorAll(".gal2 img").forEach(i=>i.onclick=()=>{lb.querySelector("img").src=i.src;lb.classList.add("on")});lb.onclick=()=>lb.classList.remove("on");
 document.getElementById("f").onsubmit=e=>{e.preventDefault();const f=e.target,v=k=>f[k].value.trim();
 const t=L=="ru"?["Здравствуйте! Хочу оставить заявку в детский сад «Еркемай».","Родитель","Телефон","Ребёнок","Группа","Комментарий"]:["Сәлеметсіз бе! «Еркемай» балабақшасына өтініш қалдырғым келеді.","Ата-ана","Телефон","Бала","Топ","Пікір"];
 let m=`${t[0]}\n${t[1]}: ${v("n")}\n${t[2]}: ${v("p")}\n${t[3]}: ${v("ch")}`+(v("g")?`\n${t[4]}: ${v("g")}`:"")+(v("m")?`\n${t[5]}: ${v("m")}`:"");
